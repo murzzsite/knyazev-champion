@@ -1,0 +1,24 @@
+{
+  "site": "https://vknyazevsystem.ru",
+  "updated": "2026-11-18",
+  "awaiting": [
+    {
+      "slug": "strah-holodnyh-zvonkov-menedzhery",
+      "path": "articles/strah-holodnyh-zvonkov-menedzhery.md",
+      "title": "Менеджеры боятся холодных звонков: что делать руководителю отдела продаж",
+      "description": "Менеджеры откладывают холодные звонки? Разбираем причины страха, простой алгоритм звонка и упражнения, которые снимают страх через повторение.",
+      "reading_time": "10 мин чтения",
+      "preview_url": "https://vknyazevsystem.ru/blog/preview/eab328b7547a/strah-holodnyh-zvonkov-menedzhery/"
+    },
+    {
+      "slug": "trening-po-prodazham-dlya-otdela",
+      "path": "articles/trening-po-prodazham-dlya-otdela.md",
+      "title": "Тренинг по продажам для отдела продаж: как выбрать формат и не потратить бюджет впустую",
+      "description": "Как выбрать тренинг по продажам для отдела продаж: офлайн или онлайн, сколько практики нужно, что проверить до оплаты. Чек-лист для руководителя.",
+      "reading_time": "10 мин чтения",
+      "preview_url": "https://vknyazevsystem.ru/blog/preview/aff3c3cebe19/trening-po-prodazham-dlya-otdela/"
+    }
+  ],
+  "scheduled": [],
+  "published": []
+}
