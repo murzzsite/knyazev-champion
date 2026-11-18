@@ -1,0 +1,39 @@
+{
+  "siteName": "Чемпион Будущих Продаж",
+  "siteUrl": "https://vknyazevsystem.ru",
+  "lang": "ru",
+  "repo": "murzzsite/knyazev-champion",
+  "ref": "BLRWQDAN9Z",
+  "workerUrl": "https://lead-relay.leestygpt.workers.dev",
+  "blogTitle": "Блог",
+  "blogDescription": "Статьи о продажах, отделах продаж и обучении менеджеров",
+  "homeTitle": "Полезные статьи",
+  "author": {
+    "name": "Василий Князев",
+    "jobTitle": "Бизнес-эксперт, тренер по продажам",
+    "type": "Person"
+  },
+  "ctaTitle": "Остались вопросы?",
+  "ctaText": "Оставьте заявку — разберём вашу ситуацию и подскажем следующий шаг.",
+  "ctaButton": "Оставить заявку",
+  "ctaUrl": "/#form",
+  "disclaimer": "",
+  "telegramNotify": true,
+  "cadenceDays": 7,
+  "homeLatest": 3,
+  "staticPages": [
+    "/",
+    "/privacy.html"
+  ],
+  "indexNowKey": "2ea1fc4c15a0f3cd1bac04f0721579b2",
+  "previewSecret": "0dca632d623a30ed",
+  "theme": {
+    "accent": "var(--clr-accent)",
+    "bg": "var(--clr-bg)",
+    "surface": "var(--clr-surface)",
+    "ink": "var(--clr-ink)",
+    "soft": "var(--clr-ink-soft)",
+    "line": "var(--clr-border)",
+    "accent-soft": "color-mix(in srgb, var(--clr-accent) 10%, #ffffff)"
+  }
+}
