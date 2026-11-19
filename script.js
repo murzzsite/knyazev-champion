@@ -40,6 +40,8 @@
     });
   });
 
+  document.querySelectorAll('a[href*="SystemSVK_bot"]').forEach(a => a.addEventListener('click', () => { if (window.ym) ym(114359533, 'reachGoal', 'zayavka'); }));
+
   // ===== FORM SUBMIT → CLOUDFLARE WORKER → TELEGRAM =====
   const form = document.getElementById('leadForm');
   form?.addEventListener('submit', async e => {
@@ -68,6 +70,7 @@
         body: JSON.stringify(payload),
       });
       if (!resp.ok) throw new Error('HTTP ' + resp.status);
+      if (window.ym) ym(114359533, 'reachGoal', 'zayavka');
       btn.textContent = 'Заявка отправлена ✓';
       form.reset();
     } catch (err) {
