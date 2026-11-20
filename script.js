@@ -124,3 +124,22 @@
   }, { threshold: 0.4 });
   counters.forEach(el => countIO.observe(el));
 })();
+
+// ===== COOKIE NOTICE =====
+(() => {
+  const KEY = 'cookie_notice_ok';
+  try { if (localStorage.getItem(KEY)) return; } catch (e) {}
+  const css = document.createElement('style');
+  css.textContent = '.cookie{position:fixed;left:16px;right:16px;bottom:16px;max-width:620px;margin:0 auto;z-index:200;background:#15213b;color:#eef1f7;border-radius:14px;padding:16px 20px;display:flex;gap:16px;align-items:center;box-shadow:0 18px 40px -16px rgba(0,0,0,.5);font:14px/1.5 Inter,sans-serif}.cookie a{color:#e8a21c;text-decoration:underline}.cookie button{flex-shrink:0;border:0;border-radius:999px;background:#e8a21c;color:#15213b;font:600 14px Inter,sans-serif;padding:10px 20px;cursor:pointer}@media(max-width:560px){.cookie{flex-direction:column;align-items:stretch;text-align:left}}';
+  document.head.appendChild(css);
+  const box = document.createElement('div');
+  box.className = 'cookie';
+  box.setAttribute('role', 'dialog');
+  box.setAttribute('aria-label', 'Использование файлов cookie');
+  box.innerHTML = '<span>Мы используем файлы cookie и сервис Яндекс Метрика, чтобы сайт работал лучше. Продолжая пользоваться сайтом, вы соглашаетесь с этим. Подробнее в <a href="/privacy.html">политике конфиденциальности</a>.</span><button type="button">Понятно</button>';
+  box.querySelector('button').addEventListener('click', () => {
+    try { localStorage.setItem(KEY, '1'); } catch (e) {}
+    box.remove();
+  });
+  document.body.appendChild(box);
+})();
