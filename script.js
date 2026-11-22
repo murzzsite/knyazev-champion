@@ -143,3 +143,24 @@
   });
   document.body.appendChild(box);
 })();
+
+// ===== MAILTO: открыть почтовую программу + скопировать адрес (если программы на устройстве нет) =====
+(() => {
+  const links = document.querySelectorAll('a[href^="mailto:"]');
+  if (!links.length) return;
+  const css = document.createElement('style');
+  css.textContent = '.mail-toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:300;background:#15213b;color:#fff;border-radius:999px;padding:10px 20px;font:14px/1.4 Inter,sans-serif;box-shadow:0 12px 30px -12px rgba(0,0,0,.5)}';
+  document.head.appendChild(css);
+  let timer;
+  links.forEach(a => a.addEventListener('click', () => {
+    const addr = a.getAttribute('href').replace(/^mailto:/i, '').split('?')[0];
+    try { if (navigator.clipboard) navigator.clipboard.writeText(addr).catch(() => {}); } catch (e) {}
+    const old = document.querySelector('.mail-toast'); if (old) old.remove();
+    const t = document.createElement('div');
+    t.className = 'mail-toast'; t.setAttribute('role', 'status');
+    t.textContent = 'Адрес ' + addr + ' скопирован';
+    document.body.appendChild(t);
+    clearTimeout(timer); timer = setTimeout(() => t.remove(), 3500);
+    if (window.ym) { try { ym(114359533, 'reachGoal', 'email_click'); } catch (e) {} }
+  }));
+})();
