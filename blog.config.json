@@ -23,7 +23,11 @@
   "homeLatest": 3,
   "staticPages": [
     "/",
-    "/privacy.html"
+    "/privacy.html",
+    "/uslugi/trening-po-prodazham/",
+    "/uslugi/holodnye-zvonki/",
+    "/uslugi/rabota-s-vozrazheniyami/",
+    "/uslugi/podbor-menedzherov/"
   ],
   "indexNowKey": "2ea1fc4c15a0f3cd1bac04f0721579b2",
   "previewSecret": "0dca632d623a30ed",

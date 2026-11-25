@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
 Disallow: /blog/preview/
+Disallow: /project/
 
 Sitemap: https://vknyazevsystem.ru/sitemap.xml

@@ -222,7 +222,7 @@ p { margin: 0 0 12px; }
   .nav { gap: 16px; }
   .nav a { font-size: 14px; }
 }
-@media (max-width: 1100px) {
+@media (max-width: 1499px) {
   .nav { display: none; }
   .burger { display: flex; }
   .nav.is-open {
@@ -242,6 +242,7 @@ p { margin: 0 0 12px; }
 }
 @media (max-width: 560px) {
   .header__phone { display: none; }
+  .header__actions .btn { display: none; }
   .hero h1 { font-size: 30px; }
   .adv-grid, .services-grid, .reviews-grid, .process-grid { grid-template-columns: 1fr; }
   .hero__stats { gap: 24px; }
@@ -282,3 +283,13 @@ p { margin: 0 0 12px; }
 .hero__card-photo { padding: 0; height: auto; background: none; }
 .hero__card-photo img { width: 100%; height: 300px; object-fit: cover; object-position: center 30%; }
 @media (max-width: 560px) { .hero__card-photo img { height: 240px; } }
+
+/* consent checkbox + service cards as links */
+.form .form__consent { flex-direction: row; align-items: flex-start; gap: 10px; font-weight: 400; font-size: 13.5px; line-height: 1.5; cursor: pointer; }
+.form .form__consent input { width: 20px; height: 20px; min-width: 20px; margin: 2px 0 0; padding: 0; accent-color: var(--clr-accent-dark); }
+.form .form__consent a { color: var(--clr-accent-dark); text-decoration: underline; }
+a.service { color: inherit; transition: transform .18s ease, box-shadow .18s ease; }
+a.service:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+.header .header__inner { max-width: 1480px; }
+@media (max-width: 900px) { .header__phone { display: none; } }
+@media (max-width: 700px) { .header__actions .btn { display: none; } }

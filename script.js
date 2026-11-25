@@ -55,6 +55,12 @@
 
     if (payload._gotcha) return;
 
+    if (!form.querySelector('input[name="consent"]')?.checked) {
+      alert('Отметьте согласие на обработку персональных данных');
+      return;
+    }
+    delete payload.consent;
+
     if (!payload.name || (!payload.phone && !payload.contact)) {
       alert('Заполните имя и контактные данные');
       return;
